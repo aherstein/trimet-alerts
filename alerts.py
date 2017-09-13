@@ -45,6 +45,7 @@ def tweet(alert):
         if 'errors' in data:
             print(data['errors'][0]['message'])
             exit(1)
+        exit(0)  # We only want to tweet out once per run to avoid Twitter flood controls
 
 
 get_alerts()
