@@ -49,3 +49,5 @@ def tweet(alert):
 
 
 get_alerts()
+print("No alerts")
+
