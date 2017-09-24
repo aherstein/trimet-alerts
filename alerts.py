@@ -34,7 +34,7 @@ def get_alerts():
 
 def tweet(alert):
     alert = unicodedata.normalize('NFKD', alert).encode('ascii', 'ignore')
-    if 'auto blocking' in alert or 'car blocking' in alert:
+    if 'auto' in alert or 'car' in alert:
         print(alert)
         r = oauth_req(TWITTER_POST_ENDPOINT.format(urllib.quote_plus(alert)),
                       secrets.ACCESS_TOKEN,
